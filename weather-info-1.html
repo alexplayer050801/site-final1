@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather API Example</title>
+</head>
+<body>
+  <form>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" placeholder="Enter location" required>
+
+    <label for="date-range">Date range:</label>
+    <input type="date" id="start-date" name="start-date" required>
+    <input type="date" id="end-date" name="end-date" required>
+
+    <button type="button" onclick="getWeather()">Get Weather</button>
+  </form>
+
+  <div id="weather-results"></div>
+
+  <script>
+    function getWeather() {
+      const location = document.getElementById('location').value;
+      const startDate = document.getElementById('start-date').value;
+      const endDate = document.getElementById('end-date').value;
+
+      const url = `https://alexplayer050801.github.io/weatherinfo/weather-info.json`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const resultsDiv = document.getElementById('weather-results');
+          resultsDiv.innerHTML = '';
+
+          data.months.forEach(month => {
+            const monthDiv = document.createElement('div');
+            monthDiv.innerHTML = `
+              <h3>Month ${month.month}</h3>
+              <p>Average temperature: ${month.average_temperature} °F</p>
+              <p>Average humidity: ${month.average_humidity}%</p>
+              <p>Average precipitation: ${month.average_precipitation} in</p>
+            `;
+            resultsDiv.appendChild(monthDiv);
+          });
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  </script>
+   <div style="
+   width: 215px;
+   height: 47px;
+   margin-left: 1114px;">
+   <a href="Vlad Alexandru new-code-2.html">
+       <button class="back-home">
+           back home
+          </button>
+      </a>
+   </div>
+<style>
+   .back-home {
+        border: none;
+        background-color: transparent;
+        font-family: courier;
+        color: rgb(1, 111, 160);
+        font-size: 36px;
+        font-weight: normal;
+        margin-top: -30px;
+    }
+
+    .back-home:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .back-home:active {
+        font-weight: bold;
+    }
+</style>
+</body>
+</html>

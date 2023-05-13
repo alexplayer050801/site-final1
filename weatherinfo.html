@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather API Example</title>
+  </head>
+  <body>
+    <div id="weather-data"></div>
+    
+    <script>
+      // Make an AJAX request to the weather API
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'https://alexplayer050801.github.io/weatherinfo/weather-info.json');
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          
+          // Update the HTML of the 'weather-data' div with the API's response
+          var weatherDataDiv = document.getElementById('weather-data');
+          weatherDataDiv.innerHTML = '<h2>Weather for ' + response.location.city + ', ' + response.location.state + '</h2>';
+          
+          for (var i = 0; i < response.months.length; i++) {
+            var monthData = response.months[i];
+            var monthDiv = document.createElement('div');
+            monthDiv.innerHTML = '<h3>Month: ' + monthData.month + '</h3>' +
+                                 '<p>Average Temperature: ' + monthData.average_temperature + '°F</p>' +
+                                 '<p>Average Humidity: ' + monthData.average_humidity + '%</p>' +
+                                 '<p>Average Precipitation: ' + monthData.average_precipitation + ' inches</p>';
+            weatherDataDiv.appendChild(monthDiv);
+          }
+        } else {
+          console.log('Error making weather API request.');
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
+
+    </head>
+</html>

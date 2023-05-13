@@ -1,0 +1,36 @@
+{
+    "location": {
+      "city": "Austin",
+      "state": "Texas",
+      "country": "United States",
+      "latitude": 30.2672,
+      "longitude": -97.7431
+    },
+    "months": [
+      {
+        "month": 6,
+        "average_temperature": 83.2,
+        "average_humidity": 68,
+        "average_precipitation": 3.6
+      },
+      {
+        "month": 7,
+        "average_temperature": 86.3,
+        "average_humidity": 67,
+        "average_precipitation": 2.1
+      },
+      {
+        "month": 8,
+        "average_temperature": 86.1,
+        "average_humidity": 66,
+        "average_precipitation": 2.6
+      },
+      {
+        "month": 9,
+        "average_temperature": 82.1,
+        "average_humidity": 67,
+        "average_precipitation": 3.5
+      }
+    ]
+  }
+  

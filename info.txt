@@ -1,0 +1,9 @@
+1. Avanti
+2. Champ
+3. Scotsman
+4. Golden Hawk
+5. Sky Hawk
+
+database name: itech182
+username: itech182
+password: de la outlook

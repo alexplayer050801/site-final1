@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Studebaker
+        </title>
+        <script>
+            fetch('https://alexplayer050801.github.io/locationinfo/static-api-locationinfo.json')
+              .then(response => response.json())
+              .then(data => {
+                const exhibitionsContainer = document.getElementById('exhibitions-container');
+          
+                data.exhibitions.forEach(exhibition => {
+                  const exhibitionDiv = document.createElement('div');
+                  exhibitionDiv.classList.add('exhibition');
+          
+                  const title = document.createElement('h2');
+                  title.textContent = exhibition.title;
+                  exhibitionDiv.appendChild(title);
+          
+                  const description = document.createElement('p');
+                  description.textContent = exhibition.description;
+                  exhibitionDiv.appendChild(description);
+          
+                  const location = document.createElement('p');
+                  location.textContent = exhibition.location;
+                  exhibitionDiv.appendChild(location);
+          
+                  const date = document.createElement('p');
+                  date.textContent = exhibition.date;
+                  exhibitionDiv.appendChild(date);
+          
+                  const image = document.createElement('img');
+                  image.src = exhibition.image;
+                  exhibitionDiv.appendChild(image);
+          
+                  exhibitionsContainer.appendChild(exhibitionDiv);
+                });
+              })
+              .catch(error => console.error(error));
+          </script>
+          
+    </head>
+    <body>
+        <div id="exhibitions-container"></div>
+
+        <div style="
+        width: 215px;
+        height: 47px;
+        margin-left: 1114px;">
+        <a href="Vlad Alexandru new-code-2.html">
+            <button class="back-home">
+                back home
+               </button>
+           </a>
+        </div>
+
+       
+    </body>
+</html>
+<style>
+    .back-home {
+        border: none;
+        background-color: transparent;
+        font-family: courier;
+        color: rgb(1, 111, 160);
+        font-size: 36px;
+        font-weight: normal;
+    }
+
+    .back-home:hover {
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .back-home:active {
+        font-weight: bold;
+    }
+</style>

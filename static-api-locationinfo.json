@@ -1,0 +1,25 @@
+{
+   "exhibitions": [
+      {
+         "title": "Studebaker Legacy Exhibit",
+         "description": "A collection of Studebaker cars and memorabilia from the 1930s to the 1960s, showcasing the legacy of Studebaker Corporation.",
+         "location": "Texas Museum of Automotive History, Austin, TX",
+         "date": "June 1, 2023 - July 31, 2023",
+         "image": "avanti.jfif"
+      },
+      {
+         "title": "Studebaker Car Show",
+         "description": "An annual gathering of Studebaker car enthusiasts, featuring a display of classic and modern Studebaker cars.",
+         "location": "Austin Motor Mile, Austin, TX",
+         "date": "September 10, 2023",
+         "image": "champ.jfif"
+      },
+      {
+         "title": "Studebaker Club Meeting",
+         "description": "A monthly meeting of the Studebaker Drivers Club, where members discuss their Studebaker cars and share restoration tips.",
+         "location": "Austin Public Library, Austin, TX",
+         "date": "First Saturday of every month",
+         "image": "scotsman.jpg"
+      }
+   ]
+}

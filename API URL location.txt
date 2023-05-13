@@ -1,0 +1,3 @@
+https://alexplayer050801.github.io/locationinfo/static-api-locationinfo.json
+
+URL welcome page  -  https://alexplayer050801.github.io/welcome-page/Vlad%20Alexandru%20welcome-page.html
